@@ -1,0 +1,15 @@
+{
+  "port": 3333,
+  "db_host": "localhost",
+  "db_username": "postgres",
+  "db_port": "3001",
+  "db_password": "2005",
+  "db_name": "power-tools",
+  "crypt_password": "MySecretCryptoPassword",
+  "iv": "qwerty12",
+  "access_key": "MyAccessTokenSecretKey",
+  "refresh_key": "MyRefreshTokenSecretKey",
+  "access_time": "15h",
+  "refresh_time": "30d",
+  "refresh_time_ms": "129600000"
+}
