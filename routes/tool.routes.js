@@ -1,18 +1,12 @@
-const express = require("express");
-const {
-  addTool,
-  getToolByID,
-  getAllTools,
-  updateTool,
-  deleteTool,
-} = require("../controllers/tool.controller");
+const { Router } = require("express");
+const { addTool, getTools, updateTool, deleteTool } = require("../controllers/tool.controller");
 
-const router = express.Router();
+const router = Router();
 
-router.post("/", addTool);
-router.get("/", getAllTools);
-router.get("/:id", getToolByID);
-router.put("/:id", updateTool);
-router.delete("/:id", deleteTool);
+router.post("/add",addTool)
+router.get("/get",getTools)
+router.put("/update/:id",updateTool)
+router.delete("/delate",deleteTool)
 
-module.exports = router;
+
+module.exports= router  

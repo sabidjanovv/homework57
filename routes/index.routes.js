@@ -1,12 +1,17 @@
-const express = require("express");
+const { Router } = require("express");
+const router = Router();
 
-const router = express.Router();
-const clientRouter = require("./client.routes");
-const ownerRouter = require("./owner.routes");
-const toolRouter = require("./tool.routes");
+const clientRouter = require('./client.routes')
+const toolRouter = require('./tool.routes')
+const owner = require("./owner.routes")
+const shop = require("./shop.routes")
+const district = require("./district.routes")
 
-router.use("/client", clientRouter);
-router.use("/owner", ownerRouter);
-router.use("/tool", toolRouter);
+router.use('/client', clientRouter)
+router.use('/tool', toolRouter)
+router.use('/owner', owner)
+router.use('/shop', shop)
+router.use('/district', district)
 
-module.exports = router;
+
+module.exports = router

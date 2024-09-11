@@ -1,18 +1,11 @@
-const express = require("express");
-const {
-  addOwner,
-  getOwnerByID,
-  getAllOwners,
-  updateOwner,
-  deleteOwner,
-} = require("../controllers/owner.controller");
-
+const express = require('express');
+const { createOwner, getOwners, getOwnerById, updateOwner, deleteOwner } = require('../controllers/owner.controller');
 const router = express.Router();
 
-router.post("/", addOwner);
-router.get("/", getAllOwners);
-router.get("/:id", getOwnerByID);
-router.put("/:id", updateOwner);
-router.delete("/:id", deleteOwner);
+router.post('/add', createOwner); 
+router.get('/get', getOwners);    
+router.get('/owners/:id', getOwnerById); 
+router.put('/owners/:id', updateOwner); 
+router.delete('/owners/:id', deleteOwner); 
 
 module.exports = router;
